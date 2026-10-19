@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # One-command setup: initializes git, installs the secret-scan hook, creates the
-# GitHub repo under YOUR account, and pushes. You authenticate yourself.
+# GitHub repo under the account, and pushes.
 #
 # Prerequisites (one time):
 #   brew install gh gitleaks
