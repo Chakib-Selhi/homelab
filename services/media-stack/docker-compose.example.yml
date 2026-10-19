@@ -1,0 +1,17 @@
+# Sanitized example. Copy to docker-compose.yml, create a real .env from
+# .env.example, and keep both the real .env and any ./data out of git.
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    restart: unless-stopped
+    environment:
+      - TZ=${TZ}
+    ports:
+      - "8096:8096"
+    volumes:
+      - ./config:/config
+      - ${MEDIA_PATH}:/media:ro
+    # No ports are exposed to the internet. Access is over the private
+    # overlay network (Tailscale) or the LAN only.

@@ -1,0 +1,12 @@
+# Sanitized example. Home Assistant can also run as a VM (HAOS) on the NAS.
+# This container variant is the lighter option.
+
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    restart: unless-stopped
+    network_mode: host    # needed for device discovery and the HomeKit bridge
+    environment:
+      - TZ=${TZ}
+    volumes:
+      - ./config:/config

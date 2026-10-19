@@ -1,0 +1,44 @@
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+*.env
+secrets/
+*.secret
+
+# Keys, certificates, tokens
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*.ovpn
+*_authkey*
+tailscale*.key
+
+# Backups and data dumps that may contain real config
+*.bak
+*.sql
+*.dump
+backup/
+dumps/
+
+# Service runtime data (bind mounts, databases)
+data/
+volumes/
+config/*/db/
+*.sqlite
+*.sqlite3
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs (may contain IPs, hostnames, tokens)
+*.log
+logs/

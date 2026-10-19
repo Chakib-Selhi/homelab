@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Blocks commits that contain secrets. Install with: bash setup.sh (or copy to
+# .git/hooks/pre-commit and chmod +x). Requires gitleaks on PATH.
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks protect --staged --redact || {
+    echo "gitleaks found a potential secret. Commit aborted."
+    echo "Remove the secret, or if it is a false positive, review before retrying."
+    exit 1
+  }
+else
+  echo "warning: gitleaks not installed, skipping secret scan."
+  echo "install it: brew install gitleaks"
+fi

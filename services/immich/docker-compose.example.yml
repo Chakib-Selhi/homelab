@@ -1,0 +1,30 @@
+# Sanitized example. Copy to docker-compose.yml, create a real .env from
+# .env.example, and keep the real .env and ./library, ./postgres out of git.
+# Pin to a specific release tag in real use instead of a floating one.
+
+services:
+  immich-server:
+    image: ghcr.io/immich-app/immich-server:release
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "2283:2283"
+    volumes:
+      - ${UPLOAD_LOCATION}:/usr/src/app/upload
+    depends_on:
+      - database
+      - redis
+
+  redis:
+    image: redis:7
+    restart: unless-stopped
+
+  database:
+    image: ghcr.io/immich-app/postgres:16-vectorchord
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_DB: ${DB_DATABASE_NAME}
+    volumes:
+      - ${DB_DATA_LOCATION}:/var/lib/postgresql/data
