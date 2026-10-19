@@ -1,5 +1,7 @@
 # Homelab & NAS
 
+![CI](https://github.com/Chakib-Selhi/homelab/actions/workflows/ci.yml/badge.svg)
+
 Self-hosted storage and services on a 4-bay NAS in a basement home lab, with a
 wired backhaul over existing coaxial cabling (MoCA). Built to consolidate cloud
 and local storage into one redundant pool, run containerized services, and
