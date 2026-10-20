@@ -1,7 +1,7 @@
 # ADR-0001: Prebuilt x86 NAS over a DIY build
 
 - Status: accepted
-- Date: <YYYY-MM-DD>
+- Date: 2026-10-19
 
 ## Context
 

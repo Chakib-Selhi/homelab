@@ -1,7 +1,7 @@
 # ADR-0002: MoCA backhaul over pulling new Ethernet
 
 - Status: accepted
-- Date: <YYYY-MM-DD>
+- Date: 2026-10-19
 
 ## Context
 

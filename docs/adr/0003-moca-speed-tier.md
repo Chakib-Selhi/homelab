@@ -1,7 +1,7 @@
 # ADR-0003: MoCA speed tier vs the internet ceiling
 
 - Status: accepted
-- Date: <YYYY-MM-DD>
+- Date: 2026-10-19
 
 ## Context
 

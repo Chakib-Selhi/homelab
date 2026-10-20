@@ -17,7 +17,7 @@ public internet; access is over the LAN or a private overlay network (Tailscale)
 
 ## Conventions
 
-- Each stack lives under `services/<stack>/` with a sanitized `docker-compose.example.yml` and an `.env.example`.
+- Each stack lives in its own folder under `services/`, with a sanitized `docker-compose.example.yml` and an `.env.example`.
 - Real `.env`, bind-mounted `config/` and `data/` are gitignored.
 - No `ports:` are published beyond the LAN; remote access is via the overlay network.
 

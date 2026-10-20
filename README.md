@@ -7,8 +7,8 @@ wired backhaul over existing coaxial cabling (MoCA). Built to consolidate cloud
 and local storage into one redundant pool, run containerized services, and
 practice infrastructure and operational security.
 
-Status: build in progress. Hardware selected, documentation and service stacks
-being rolled out. Items marked `<placeholder>` or TBD are not yet finalized.
+Status: build in progress. Hardware is selected and documented; the service
+stacks are being rolled out.
 
 ## Table of contents
 
@@ -52,7 +52,7 @@ Details: [`docs/architecture.md`](docs/architecture.md), [`docs/network.md`](doc
 | Component | Selected model | Notes |
 |-----------|----------------|-------|
 | NAS | UGREEN NASync DXP4800 Plus | 4-bay, Intel Pentium Gold 8505, 8 GB DDR5, 10GbE + 2.5GbE, Docker + VM |
-| Drives | `<count> x <size>` NAS-rated CMR (WD Red Plus / Seagate IronWolf) | redundant pool, sizes TBD |
+| Drives | 2 x 12 TB NAS-rated CMR (WD Red Plus / Seagate IronWolf) | mirrored redundant pool (planned) |
 | Switch | TP-Link TL-SG108S-M2 | 8-port 2.5GbE, unmanaged, fanless |
 | MoCA adapters | ASUS MA-25 x2 | MoCA 2.5, Ethernet-over-coax backhaul |
 | PoE filter | MoCA point-of-entry filter | keeps MoCA signal in-house |
@@ -105,7 +105,7 @@ Short records of the engineering tradeoffs behind this build:
 
 - Internet speed and local network speed are separate budgets: a 900 Mbps WAN does not cap NAS <-> workstation transfers, which stay on the local switch.
 - A multi-gig link only helps when both ends and the path support it; otherwise you pay for unused headroom.
-- `<an incident you diagnosed and fixed>`
+- Built a CI pipeline (gitleaks secret scan + markdown lint) and debugged real failures: a markdownlint rule on fenced code blocks, a YAML indentation error, and a gitleaks run broken by a history rewrite, until the pipeline passed.
 
 ## Roadmap
 

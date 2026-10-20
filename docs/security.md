@@ -56,11 +56,11 @@ documentation ranges (RFC 5737: 192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24).
 | Copy | Location | Medium |
 |------|----------|--------|
 | Primary | NAS redundant pool | on-site |
-| Secondary | Encrypted offsite (`<cloud or remote>`) | off-site |
+| Secondary | Encrypted offsite (Backblaze B2) | off-site |
 | Cold | External drive updated periodically | on-site, offline |
 
 A restore is tested periodically. An untested backup is not a backup.
 
 ## Threat notes
 
-- `<a risk you considered and how you mitigated it>`
+- Accidental secret exposure in a public repo: mitigated by gitignoring `.env` files, committing only `.env.example` templates, and enforcing gitleaks secret scanning in CI.

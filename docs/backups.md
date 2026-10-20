@@ -9,7 +9,7 @@ follows a 3-2-1 strategy, with photos treated as the highest priority.
 | Copy | Location | Medium | Frequency |
 |------|----------|--------|-----------|
 | Primary | NAS redundant pool | on-site | continuous |
-| Secondary | Encrypted offsite (`<cloud or remote>`) | off-site | scheduled (see `scripts/backup.sh`) |
+| Secondary | Encrypted offsite (Backblaze B2) | off-site | scheduled (see `scripts/backup.sh`) |
 | Cold | External drive, kept offline | on-site, offline | periodic |
 
 ## Snapshots
@@ -27,4 +27,4 @@ rclone configuration lives in `~/.config/rclone` and is never committed.
 A restore is tested periodically from each copy. An untested backup is not a
 backup. Record each test here:
 
-- `<date>`: restored `<what>` from `<copy>` -> `<result>`.
+- No restore tested yet; first test planned once the pool is built.

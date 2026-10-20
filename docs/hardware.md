@@ -7,8 +7,8 @@ Selected components for the build. Status: selected; pool not yet finalized.
 | Component | Model | Specs | Notes |
 |-----------|-------|-------|-------|
 | NAS | UGREEN NASync DXP4800 Plus | Intel Pentium Gold 8505 (5-core), 8 GB DDR5, 4 bays, 10GbE + 2.5GbE, 2x M.2 | Docker + VM capable, open (non-locked) drive support |
-| Drives | WD Red Plus / Seagate IronWolf | `<count> x <size>`, CMR, NAS-rated | redundant pool, sizes TBD |
-| Cache (optional) | `<model>` | `<size>` M.2 NVMe | optional read/write cache |
+| Drives | WD Red Plus / Seagate IronWolf | 2 x 12 TB, CMR, NAS-rated | mirrored redundant pool (planned) |
+| Cache (optional) | Not installed | n/a | may add an M.2 NVMe cache later |
 
 ## Network
 

@@ -1,7 +1,7 @@
 # ADR-0004: 2.5GbE switch in the lab
 
 - Status: accepted
-- Date: <YYYY-MM-DD>
+- Date: 2026-10-19
 
 ## Context
 

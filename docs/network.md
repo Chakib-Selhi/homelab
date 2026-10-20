@@ -55,4 +55,4 @@ real public IP.
 
 - If MoCA does not link, the usual cause is an old splitter that attenuates the MoCA band; use a splitter rated to at least 1675 MHz.
 - The gateway is DOCSIS 3.1, so a band switch on the adapters avoids frequency overlap.
-- Log format: `<date>`: `<symptom>` -> `<root cause>` -> `<fix>`.
+- Entry format: date, symptom, root cause, fix. None logged yet.
